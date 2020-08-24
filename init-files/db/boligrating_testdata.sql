@@ -28,7 +28,8 @@ CREATE TABLE IF NOT EXISTS boligrating_testdata.adresser (
 CREATE TABLE IF NOT EXISTS boligrating_testdata.reviews (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     dato_review DATETIME NOT NULL,
-    adresse_id INT NOT NULL REFERENCES adresser(bruksenhetid),
+    adresse_id INT REFERENCES adresser(id),
+    leilighet_id INT REFERENCES leiligheter(id),
 
     karakter_total TINYINT NOT NULL,
     karakter_bygg TINYINT NOT NULL,
@@ -47,3 +48,4 @@ CREATE TABLE IF NOT EXISTS boligrating_testdata.reviews (
     telefonnummer_reviewer VARCHAR(11) NOT NULL,
     godkjent TINYINT NOT NULL
 );
+

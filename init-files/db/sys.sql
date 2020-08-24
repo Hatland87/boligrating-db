@@ -1,0 +1,3 @@
+--innodb_ft_min_token_size=1
+--ft_min_word_len=1
+--ngram_token_size=1

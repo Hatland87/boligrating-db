@@ -15,7 +15,7 @@ for l in file:
     line = l.split(';')
     if line[2] == 'vegadresse' and line[15] != '':
         try:
-            data = (line[14], line[6], line[7], line[8], line[7] + line[8], line[15], line[21],line[22],line[2])
+            data = (line[14], line[6], line[7], line[8], line[7] + line[8], line[15], line[21],line[22],line[1])
             cursor.execute(query, data)
             cnx.commit()
         except:

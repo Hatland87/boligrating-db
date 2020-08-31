@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
 
@@ -11,7 +11,5 @@ services:
         volumes: 
             - ./init-files/db:/docker-entrypoint-initdb.d
             - ./init-files/cnf:/etc/mysql/conf.d
-
         environment: 
-            MYSQL_ROOT_PASSWORD: password
-        
+            - MYSQL_ROOT_PASSWORD=

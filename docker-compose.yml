@@ -12,4 +12,4 @@ services:
             - ./init-files/db:/docker-entrypoint-initdb.d
             - ./init-files/cnf:/etc/mysql/conf.d
         environment: 
-            - MYSQL_ROOT_PASSWORD=
+            - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}

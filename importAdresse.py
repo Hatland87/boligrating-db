@@ -1,13 +1,6 @@
-import mysql.connector
+from db import cnx, cursor
 
 file = open('./data/real/matrikkelenVegadresse.csv', encoding="utf8")
-
-cnx = mysql.connector.connect(
-    host = "localhost",
-    user = "root",
-    password = "password"
-)
-cursor = cnx.cursor()
 
 query = "INSERT INTO boligrating.adresser(id, veinavn,nummer,bokstav,nummer_bokstav, postnummer, poststed, kommunenavn) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
         

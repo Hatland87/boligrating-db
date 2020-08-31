@@ -1,4 +1,5 @@
 CREATE SCHEMA IF NOT EXISTS boligrating_testdata;
+USE boligrating_testdata;
 
 CREATE TABLE IF NOT EXISTS boligrating_testdata.leiligheter (
     id BIGINT NOT NULL PRIMARY KEY, 
@@ -49,7 +50,7 @@ CREATE TABLE IF NOT EXISTS boligrating_testdata.reviews (
     godkjent TINYINT NOT NULL
 );
 
-CREATE VIEW IF NOT EXISTS boligrating_testdata.adresse_leilighet AS
+CREATE VIEW boligrating_testdata.adresse_leilighet AS
 SELECT 
 a.id as adresseID,
 l.id as leilighetID,

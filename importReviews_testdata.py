@@ -2,7 +2,7 @@ from db import cnx, cursor
 
 file = open('./data/test/reviews.csv', encoding="utf8")
 
-query = "INSERT INTO boligrating_testdata.reviews(dato_review, adresse_id, karakter_total, karakter_bygg, karakter_pris, karakter_utleier, navn_utleier, kontrakt_oppsigelsestid, depositumskonto, leiepris, depositum, leie_fra, leie_til, bo_alene, telefonnummer_reviewer, godkjent) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+query = "INSERT INTO boligrating_testdata.reviews(dato_review, adresse_id, leilighet_id, karakter_total, karakter_bygg, karakter_pris, karakter_utleier, navn_utleier, kontrakt_oppsigelsestid, depositumskonto, leiepris, depositum, leie_fra, leie_til, bo_alene, telefonnummer_reviewer, godkjent) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
 for l in file:
     line = l.split(';')
